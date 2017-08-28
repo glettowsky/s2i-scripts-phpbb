@@ -46,7 +46,7 @@ envsubst < /opt/app-root/etc/conf.d/50-mpm-tuning.conf.template > /opt/app-root/
 envsubst < /opt/app-root/etc/conf.d/00-documentroot.conf.template > /opt/app-root/etc/conf.d/00-documentroot.conf
 
 # noris-Anpassungen
-export MYSQL_HOST={MYSQL_HOST:-mysql}
+export MYSQL_HOST=${MYSQL_HOST:-mysql}
 export MYSQL_USER=${MYSQL_USER:-mysql}
 export MYSQL_PASSWORD=${MYSQL_PASSWORD:-password}
 export MYSQL_PORT=${MYSQL_PORT:-3306}
