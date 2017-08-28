@@ -54,11 +54,11 @@ export MYSQL_DATABASE=${MYSQL_DATABASE:-phpbb}
 export MYSQL_PREFIX=${MYSQL_PREFIX:-phpbb_}
 
 # Mysql-Connection setzen
-/usr/bin/sed -i "s/SED_DB_HOST/$MYSQL_HOST" /opt/app-root/src/config.php
-/usr/bin/sed -i "s/SED_DB_USER/$MYSQL_USER" /opt/app-root/src/config.php
-/usr/bin/sed -i "s/SED_DB_PASSWORD/$MYSQL_PASSWORD" /opt/app-root/src/config.php
-/usr/bin/sed -i "s/SED_DB_PORT/$MYSQL_PORT" /opt/app-root/src/config.php
-/usr/bin/sed -i "s/SED_DB_NAME/$MYSQL_DATABASE" /opt/app-root/src/config.php
-/usr/bin/sed -i "s/SED_TABLE_PREFIX/$MYSQL_PREFIX" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_DB_HOST/$MYSQL_HOST/" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_DB_USER/$MYSQL_USER/" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_DB_PASSWORD/$MYSQL_PASSWORD/" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_DB_PORT/$MYSQL_PORT/" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_DB_NAME/$MYSQL_DATABASE/" /opt/app-root/src/config.php
+/usr/bin/sed -i "s/SED_TABLE_PREFIX/$MYSQL_PREFIX/" /opt/app-root/src/config.php
 
 exec httpd -D FOREGROUND
